@@ -15,6 +15,7 @@ import skin from '../Components/Assests/skin.png'
 import home from '../Components/Assests/home.png'
 import The_Latest from '../Components/The_Latest/The_Latest'
 import NewsLetter from '../Components/NewsLetter/NewsLetter'
+import Footer from '../Components/Footer/Footer'
 const  Home = () => {
   return (
     <div>
@@ -72,6 +73,7 @@ const  Home = () => {
       </div>
       <The_Latest/>
       <NewsLetter/>
+      <Footer/>
      </div>
    
     

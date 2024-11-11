@@ -8,7 +8,7 @@
     margin-top: 400px;
     padding: 0px 240px;
     margin-bottom: 150px;
-    background: radial-gradient(circle at -1% 57.5%, rgb(19, 170, 82) 0%, rgb(0, 102, 43) 90%);
+    background: linear-gradient(180deg,#fde1ff 0%, #e1ffea22 60%);
     gap: 30px;
     position:absolute;
     margin-left: 160px;
