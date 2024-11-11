@@ -1,0 +1,161 @@
+.menu{
+   
+    display: flex;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    gap: 150px;
+    margin-top: 100px;
+    margin-left: 240px;
+    margin-right: 240px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    
+}
+.menu img{
+    height: 200px;
+}
+.menu img:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+.Link1{
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent; 
+}
+.Link1 h3:hover{
+    color: rgb(11, 102, 35);
+}
+.Link1:active{
+    text-decoration: underline;
+}
+
+.Link2{
+    text-decoration: none;
+    color: inherit;
+}
+.Link2 h3:hover{
+color:rgb(11, 102, 35);
+}
+.Link2:active{
+    text-decoration: underline;
+}
+.Link3{
+    text-decoration: none;
+    color: inherit;
+}
+.Link3 h3:hover{
+color:rgb(11, 102, 35);
+border-radius: 4px;
+}
+
+.Link3 h3:active{
+    text-decoration: underline;
+}
+.menu-bottom{
+    display: flex;
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    gap: 150px;
+    margin-top: 100px;
+    margin-left: 240px;
+    margin-right: 240px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.menu-bottom img{
+    height: 200px;
+    border-radius: 50%;
+}
+.menu-bottom img:hover{
+    transform: scale(1.05);
+    transition: 0.6s;    
+
+}
+.Link4{
+    text-decoration: none;
+    color: inherit;
+    
+}
+.Link4 h3:hover{
+    color:rgb(11, 102, 35);
+   
+}
+.Link4 h3:active{
+    text-decoration: underline;
+    
+}
+.Link5{
+    text-decoration: none;
+    color: inherit;
+    
+}
+.Link5 h3:hover{
+    color:rgb(11, 102, 35);
+    
+}
+.Link5 h3:active{
+    text-decoration: underline;
+   
+}
+.Link6{
+    text-decoration: none;
+    color: inherit;
+    
+}
+.Link6 h3:hover{
+    color:rgb(11, 102, 35);
+    
+}
+.Link6 h3:active{
+    text-decoration: underline;
+   
+}
+.List-Items {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 50px;
+ }
+.Link7{
+    text-decoration: none;
+    color: inherit;
+}
+.List-Items h2:hover{
+    color:rgb(11, 102, 35);   
+}
+.List-Items:active{
+    text-decoration: underline;
+}
+.item-prices{
+    margin-left: 32px;
+}
+.menu-2{
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    margin: auto;
+    margin-left: 60px;
+}
+.menu-2 img{
+
+    width: auto; 
+    height: 300px; 
+}
+
+.menu-2 img:hover{
+    transform: scale(1.05); 
+    transition: transform 0.6s ease; 
+}
+

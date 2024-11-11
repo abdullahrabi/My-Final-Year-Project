@@ -1,0 +1,49 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height:600px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.new-collections h1 {
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 30px; 
+   
+}
+.new-collections hr{
+    
+    width: 150px;
+    height: 6px;
+    border-radius: 10px;
+    background:black;
+    
+
+}
+
+.new-collections h1:hover {
+    color: rgb(11, 102, 35);
+    cursor: pointer;
+    text-decoration:wavy;
+}
+
+
+.new-collections img {
+    height: 300px;
+    width: 300px;
+}
+.new-collections img:hover{
+    cursor: pointer;
+}
+.collections{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    gap: 50px;
+
+}

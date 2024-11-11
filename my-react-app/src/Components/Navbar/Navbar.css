@@ -1,0 +1,141 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+   
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+ 
+   
+}
+
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(11, 102, 35);
+    height:90px;
+    border-bottom: 2px solid #ddd;
+    width:100%;
+    
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 22px;
+}
+
+.navbar-logo p {
+    margin-top: 0px;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    color:white;
+    margin-right: 0px;
+    font-family: 'Montserrat';
+    font-size: 25px;
+}
+.navbar-logo img{
+
+    height:45px;
+}
+
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+
+}
+.nav-login-cart img{
+
+    margin-right: 0px;
+    height:60px;
+    margin-right: 35px;
+
+}
+.nav-cart-count{
+
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    margin-top: -35px;
+    margin-left: -45px;
+    border-radius: 10px;
+    font-size: 14px;
+    background: green;
+    margin-right: 10px;
+    color: white;
+ 
+ 
+  }
+  .navbar-top{
+    width: 100%;
+    
+  }
+ 
+
+.navbar-bottom {
+    background-color: black;
+    margin-top: -5px;
+    padding: 10px 20px;
+    color: white;
+    height:fit-content;
+   
+    
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.nav-menu li {
+    margin: 0 15px; 
+    position: relative;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+
+}
+
+.nav-menu li a:hover {
+    background-color: rgb(11, 102, 35);
+    border-radius: 4px;
+}
+
+.nav-menu li hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border:white;
+    border-radius: 10px;
+    height: 2px;
+    background-color: #fff;
+    color: white;
+}
