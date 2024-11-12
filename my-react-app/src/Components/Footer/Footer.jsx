@@ -26,13 +26,10 @@ const Footer = () => {
           <Link  style={{color:'inherit',textDecoration:'none'}}to ='Perfume'> <li>Perfume</li></Link>
           <Link  style={{color:'inherit',textDecoration:'none'}}to ='Makeup'><li>Makeup</li></Link>
           <Link  style={{color:'inherit',textDecoration:'none'}}to ='Skincare'> <li>Skincare</li></Link>
-       
-        
-         
-        </ul>
+       </ul>
         <ul>
           <li>Customer Service</li>
-          <Link  style={{color:'inherit',textDecoration:'none'}}to='/login'><li>My Account</li></Link>
+          <Link style={{color:'inherit',textDecoration:'none'}}to='/login'><li>My Account</li></Link>
           <li>Contact US</li>
           <li>Cash On Delivery Service</li>
           <li>Terms & Condition</li>
