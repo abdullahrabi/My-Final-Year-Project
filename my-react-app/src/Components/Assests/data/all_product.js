@@ -13,6 +13,7 @@ import p21_img from './G12.jpg'
 import p22_img from './G13.jpeg'
 import p23_img from './G14.jpeg'
 import p24_img from './G15.jpg'
+
 let all_product = [
     {
         id:10,
@@ -151,5 +152,6 @@ let all_product = [
         old_price:460,
     
     },
+    
     ];
     export default all_product;
