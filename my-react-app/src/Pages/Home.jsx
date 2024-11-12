@@ -1,7 +1,7 @@
 import React from 'react' 
 import Hero from '../Components/Hero/Hero'
 import { Link } from 'react-router-dom'
-import './Home.css'
+import './CSS/Home.css'
 import grocery from '../Components/Assests/grocery.png'
 import Electronics from '../Components/Assests/Electronics.png'
 import Skincare from '../Components/Assests/Skincare.png'
