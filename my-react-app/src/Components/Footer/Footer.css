@@ -2,11 +2,11 @@
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 40px 20px;
+    margin: inherit;
     font-family: 'Montserrat';
     font-size: 22px;
     position: relative;
-
+    padding: 40px;
 
   }
   
