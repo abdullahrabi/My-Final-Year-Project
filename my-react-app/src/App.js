@@ -9,6 +9,7 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart'
 import Fruits from './Pages/Fruits_Vegetables';
 
+import Footer from './Components/Footer/Footer'
 
 function App() {
  
@@ -38,8 +39,9 @@ function App() {
               <Route path='/login' element={<LoginSignup/>}/>
 
           </Routes>
+          <Footer/>
         </BrowserRouter> 
-        <Footer/>
+      
     </div>
   );
   
