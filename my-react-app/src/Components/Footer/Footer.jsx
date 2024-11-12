@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="footer-links">
         <ul>
-          <Link  style={{color:'inherit',textDecoration:'none'}}to ='/Home'><li>All Categories</li></Link>
+          <Link  style={{color:'inherit',textDecoration:'none'}}to ='/'><li>All Categories</li></Link>
           <Link  style={{color:'inherit',textDecoration:'none'}} to ='Grocery'> <li>Grocery</li></Link>
           <Link  style={{color:'inherit',textDecoration:'none'}}to ='Electronics'> <li>Electronics</li></Link>
           <Link  style={{color:'inherit',textDecoration:'none'}}to ='Perfume'> <li>Perfume</li></Link>

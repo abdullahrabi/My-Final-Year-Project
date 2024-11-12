@@ -19,11 +19,9 @@
 .new-collections hr{
     
     width: 150px;
-    height: 8px;
+    border-bottom: 6px solid black;
     border-radius: 10px;
     background:black;
-    
-
 }
 
 .new-collections h1:hover {
