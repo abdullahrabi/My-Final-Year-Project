@@ -13,7 +13,21 @@ import p21_img from './G12.jpg'
 import p22_img from './G13.jpeg'
 import p23_img from './G14.jpeg'
 import p24_img from './G15.jpg'
-
+import p25_img from './E1.jpg'
+import p26_img from './E2.jpg'
+import p27_img from './E3.jpg'
+import p28_img from './E4.jpg'
+import p29_img from './E5.jpg'
+import p30_img from './E6.jpg'
+import p31_img from './E7.jpg'
+import p32_img from './E8.jpg'
+import p33_img from './E9.jpg'
+import p34_img from './E10.jpg'
+import p35_img from './E11.jpg'
+import p36_img from './E12.jpg'
+import p37_img from './E13.jpg'
+import p38_img from './E14.jpg'
+import p39_img from './E15.jpg'
 let all_product = [
     {
         id:10,
@@ -145,13 +159,147 @@ let all_product = [
     },
     {
         id:24,
-        name:"Nestle Cerelac ",
+        name:"Nestle Cerelac",
         category:"Grocery",
         image:p24_img,
         new_price:450,
         old_price:460,
     
     },
+    {
+        id:25,
+        name:"SONY W650D LED",
+        category:"Electronics",
+        image:p25_img,
+        new_price:55499,
+        old_price:56499,
     
+    },
+    {
+        id:26,
+        name:"PEL PRL2350 Refrigerator",
+        category:"Electronics",
+        image:p26_img,
+        new_price:81000,
+        old_price:82000,
+    
+    },
+    {
+        id:27,
+        name:"PEL Deep Freezer PDF70-150",
+        category:"Electronics",
+        image:p27_img,
+        new_price:90900,
+        old_price:91900,
+    
+    },
+    {
+        id:28,
+        name:"PEL Chef Digital Microwave",
+        category:"Electronics",
+        image:p28_img,
+        new_price:30900,
+        old_price:31900,
+    
+    },
+    {
+        id:29,
+        name:"PEL PINV-12k Alpha Air Conditioner",
+        category:"Electronics",
+        image:p29_img,
+        new_price:132900,
+        old_price:133900,
+    
+    },
+    {
+        id:30,
+        name:"Pel 9 KG Fully Automatic Washing Machine",
+        category:"Electronics",
+        image:p30_img,
+        new_price:75999,
+        old_price:89999,
+    
+    },
+    {
+        id:31,
+        name:"Panasonic NI-V100N Steam Iron",
+        category:"Electronics",
+        image:p31_img,
+        new_price:11500,
+        old_price:12500,
+    
+    },
+    {
+        id:32,
+        name:"Boss 50 Liters Fast Electric Geyser",
+        category:"Electronics",
+        image:p32_img,
+        new_price:33999,
+        old_price:39000,
+    
+    },
+    {
+        id:33,
+        name:"CANON Electric Infrared Cooker",
+        category:"Electronics",
+        image:p33_img,
+        new_price:21000,
+        old_price:24500,
+    
+    },
+    {
+        id:34,
+        name:"National Automatic Electric Kettle",
+        category:"Electronics",
+        image:p34_img,
+        new_price:2265,
+        old_price:2799,
+    
+    },
+    {
+        id:35,
+        name:"Pel Blaze Water Dispenser",
+        category:"Electronics",
+        image:p35_img,
+        new_price:37999,
+        old_price:44900,
+    
+    },
+    {
+        id:36,
+        name:"ANEX AG-2036C DELUXE SANDWICH MAKER",
+        category:"Electronics",
+        image:p36_img,
+        new_price:6999,
+        old_price:7999,
+    
+    },
+    {
+        id:37,
+        name:"Philips Airfryer HD9270/90",
+        category:"Electronics",
+        image:p37_img,
+        new_price:67999,
+        old_price:79999,
+    
+    },
+    {
+        id:38,
+        name:"MORENTO Air Purifiers",
+        category:"Electronics",
+        image:p38_img,
+        new_price:52512,
+        old_price:87758,
+    
+    },
+    {
+        id:39,
+        name:"Anex AG-3045 Deluxe Chopper & Blender",
+        category:"Electronics",
+        image:p39_img,
+        new_price:12530,
+        old_price:13530,
+    
+    },
     ];
     export default all_product;
