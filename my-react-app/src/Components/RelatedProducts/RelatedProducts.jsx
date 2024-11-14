@@ -1,8 +1,29 @@
 import React from 'react'
 import './RelatedProducts.css'
-const RelatedProducts = () => {
+import all_product from '../Assests/data/all_product'
+import Item from '../Item/Item'
+const RelatedProducts = ({ category }) => {
+  const relatedProducts = all_product.filter(item => item.category === category);
   return (
-    <div>
+    <div className='relatedproducts'>
+        <h1>Related Products</h1>
+        <hr />
+        <div className='relatedproducts-items'>
+        {relatedProducts.length > 0 ? (
+          relatedProducts.map((item, i) => (
+            <Item
+              key={i}
+              id={item.id}
+              name={item.name}
+              image={item.image}
+              new_price={item.new_price}
+              old_price={item.old_price}
+            />
+          ))
+        ) : (
+          <p>No related products found.</p>
+        )}
+        </div>
 
     </div>
   )
