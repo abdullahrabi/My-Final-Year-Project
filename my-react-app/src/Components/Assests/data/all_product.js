@@ -141,7 +141,7 @@ let all_product = [
     },
     {
         id:22,
-        name:"Olper’s Milk 250ml",
+        name:"Olpers Milk 250ml",
         category:"Grocery",
         image:p22_img,
         new_price:80,
