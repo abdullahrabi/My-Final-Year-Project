@@ -1,25 +1,37 @@
 .item{
-    width: 350px;
-    
-
+    width: 400px;
 }
 .item p{
     margin: 6px 0px;
+}
+.item p:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+    font-weight: 1000;
+    color:rgb(11, 102, 35);
+    cursor: pointer;
 
 }
 .item-prices{
     display: flex;
     gap: 20px;
     justify-content: center; 
-
 }
+.item-prices:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+    font-weight: 1000;
+    color:rgb(11, 102, 35);
+    cursor: pointer;
+}
+
 .item-price-new{
     color: #374151;
     font-size: 18px;
     font-weight: 600;
     justify-content: center; 
-  
-
 }
 .item-price-old{
     color: #8c8c8c;
@@ -27,11 +39,13 @@
     font-weight: 500;
     text-decoration: line-through;
     justify-content: center; 
-   
-
 }
-.item:hover{
+.item img:hover{
     transform: scale(1.05);
     transition: 0.6s;
+    font-size: larger;
+    font-weight: 1000;
+    color:rgb(11, 102, 35);
+    cursor: pointer;
     
 }

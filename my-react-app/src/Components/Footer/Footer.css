@@ -2,11 +2,12 @@
 .footer {
     background-color:black;
     color: #fff;
-    margin: inherit;
+    margin: auto;
     font-family: 'Montserrat';
     font-size: 22px;
     position: relative;
-    padding: 40px;
+    padding: 50px;
+   
 
   }
   
@@ -63,22 +64,96 @@
   
   .footer-links {
     display: flex;
+    text-align:initial;
     
-  }
+}
+.link1, .link2, .link3, .link4, .link5, .link6, .link7{
+    text-decoration: none;
+    color: inherit;
+}
+.link1:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link1:active{
+  text-decoration: underline;
+}
+.link2:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link2:active{
+    text-decoration: underline;
+}
+.link3:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link3:active{
+    text-decoration: underline;
+}
+.link4:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link4:active{
+  text-decoration: underline;
+}
+.link5:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link5:active{
+  text-decoration: underline;
+}
+.link6:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link6:active{
+    text-decoration: underline;
+}
+.link7:hover{
+    cursor: pointer;
+    font-weight: 1000;
+    transform: scale(1.05);
+    transition: 0.6s;
+    font-size: larger;
+}
+.link7:active{
+    text-decoration: underline;
+}
   
   .footer-links ul {
     list-style-type: none;
-    margin-left: 400px;
-    gap: 20px;
-    
-    
+    margin-left: 200px;
+    gap: 120px;
+    }
    
-  }
   
   .footer-links li {
     margin-bottom: 10px;
+    
     font-size: 22px;
-    gap: 20px;
+    gap: 120px;
     
     
   }
@@ -111,4 +186,4 @@
   .Social Media img{
     margin-left: 400px;
   }
-  
+ 

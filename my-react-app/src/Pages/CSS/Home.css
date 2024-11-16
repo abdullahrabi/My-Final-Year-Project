@@ -30,6 +30,8 @@
 }
 .Link1 h3:hover{
     color: rgb(11, 102, 35);
+    font-weight: 1000;
+    font-size: larger;
 }
 .Link1:active{
     text-decoration: underline;
@@ -40,7 +42,10 @@
     color: inherit;
 }
 .Link2 h3:hover{
-color:rgb(11, 102, 35);
+    color:rgb(11, 102, 35);
+    font-weight: 1000;
+   font-size: larger;
+
 }
 .Link2:active{
     text-decoration: underline;
@@ -50,8 +55,10 @@ color:rgb(11, 102, 35);
     color: inherit;
 }
 .Link3 h3:hover{
-color:rgb(11, 102, 35);
-border-radius: 4px;
+    color:rgb(11, 102, 35);
+    border-radius: 4px;
+    font-weight: 1000;
+    font-size: larger;
 }
 
 .Link3 h3:active{

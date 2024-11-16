@@ -88,7 +88,7 @@ let all_product = [
     
     {
         id:6,
-        name:"PEL Top Load Automatic Washing Machine PAWM",
+        name:"PEL Automatic Washing Machine PAWM",
         category:"Electronics",
         image:p6_img,
         new_price: 88000,
