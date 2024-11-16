@@ -1,8 +1,10 @@
 .item{
     width: 400px;
+
 }
 .item p{
     margin: 6px 0px;
+    
 }
 .item p:hover{
     transform: scale(1.05);
