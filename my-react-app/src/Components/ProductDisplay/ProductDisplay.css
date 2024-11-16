@@ -75,5 +75,8 @@
     justify-content: center;
     margin-left: 10px;
 
-    
+}
+.productdisplay-right-stars img{
+height: 50px;
+width: 50px;
 }

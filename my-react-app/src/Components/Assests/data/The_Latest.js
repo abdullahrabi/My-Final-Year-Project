@@ -26,7 +26,7 @@ let The_Latest= [
 
 {
     id:6,
-    name:"Washing Machine",
+    name:"PEL Automatic Washing Machine PAWM",
     image:p6_img,
     new_price: 63650,
     old_price:65000

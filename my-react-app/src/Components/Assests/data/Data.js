@@ -23,7 +23,7 @@ let data_product = [
 
 {
     id:3,
-    name:"Lady Finger(Bhindi)",
+    name:"Lady Finger",
     image:p3_img,
     new_price: 140,
     old_price:150,

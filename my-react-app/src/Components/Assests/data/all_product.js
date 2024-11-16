@@ -59,7 +59,7 @@ let all_product = [
     
     {
         id:3,
-        name:"Lady Finger(Bhindi)",
+        name:"Lady Finger",
         category:"Fruits_Vegetables",
         image:p3_img,
         new_price: 140,
