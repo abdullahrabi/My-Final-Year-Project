@@ -1,7 +1,10 @@
 import React from 'react'
 import './Footer.css'
 import footer_logo from '../Assests/footer_logo.png'
-import scoial_logo from '../Assests/Social Media.png'
+import facebook from '../Assests/facebook1.png'
+import instgram from '../Assests/instgram.png'
+import x from '../Assests/x.png'
+import youtube from '../Assests/youtube.jpeg'
 import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
@@ -19,6 +22,14 @@ const Footer = () => {
       </div>
 
       <div className="footer-links">
+        <ul>
+          <li>OUR BRANCHES</li>
+          <li>LAHORE</li>
+          <li>KARACHI</li>
+          <li>FAISALABAD</li>
+          <li>MULTAN</li>
+          <li>RAWALPINDI</li>
+        </ul>
         <ul>
           <Link   className='link1' to ='/Fruits_Vegetables'><li>Fruits & Vegetables</li></Link>
           <Link   className='link2' to ='Grocery'> <li>Grocery</li></Link>
@@ -39,10 +50,14 @@ const Footer = () => {
 
      
     </div>
-   
-    <img src= {scoial_logo}/>
+   <div className='social-media'>
+    <h3>FOLLOW US ON</h3>
+    <img src= {facebook}/>
+    <img src={instgram} alt="" />
+    <img src={x} alt="" />
+    <img src={youtube} alt="" />
   
-    
+    </div>
     <div className="footer-bottom">
       <p>© 2024, La Organic Store All Rights Reserved - Powered By Developer Studio</p>
     </div>

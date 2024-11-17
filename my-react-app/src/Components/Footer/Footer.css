@@ -7,6 +7,7 @@
     font-size: 22px;
     position: relative;
     padding: 50px;
+    padding-left: 70px;
    
 
   }
@@ -151,39 +152,25 @@
   
   .footer-links li {
     margin-bottom: 10px;
-    
     font-size: 22px;
     gap: 120px;
-    
-    
-  }
+}
   
-  .footer-social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer-social p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .social-icons {
-    font-size: 24px;
-  }
-  
-  .social-icons i {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .footer-bottom {
+.footer-bottom {
     text-align: center;
     margin-top: 20px;
     font-size: 22px;
   }
-  .Social Media img{
-    margin-left: 400px;
+  
+  .social-media h3{
+    align-items: center;
+    padding-left: 30px;
+    margin-left: 10px;
   }
+  .social-media img{
+    height: 70px;
+    width: 70px;
+    padding-top: 20px;
+    
+ }
  
