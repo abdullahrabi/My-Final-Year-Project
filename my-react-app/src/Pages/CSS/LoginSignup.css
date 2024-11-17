@@ -5,7 +5,7 @@
     height: 100%; 
     margin: 0;
     background: linear-gradient(to right, #264727,#08130a, #4d7144, rgb(11, 102, 35));
-    font-weight: 600;
+    font-weight: bold;
  
  
   }
@@ -31,8 +31,8 @@
   h1 {
     font-size: 46px;
     color: white;
-    margin: 20px;
-    gap: 200px;
+    margin: 30px;
+
  
   }
   
@@ -43,9 +43,10 @@
     border-bottom: 2px solid rgb(11, 102, 35);
     color: white;
     font-size: 28px;
-    padding: 20px 0;
+    padding: 10px 0;
     margin-bottom: 20px;
     width: 100%;
+   padding-top: 30px;
     
   }
   
@@ -62,21 +63,19 @@
     margin-bottom: 20px;
     color: rgb(11, 102, 35);
     font-size: 28px;
+    margin-top: 30px;
+  
   }
   
   .loginsignup-remember label {
     font-size: 18px;
- 
-   
   }
-  
   .loginsignup-remember a {
     font-size: 18px;
     color: rgb(11, 102, 35);
     text-decoration: none;
-    gap: 200px;
   }
-  
+
   .loginsignup-remember a:hover {
     text-decoration: underline;
   }
@@ -125,12 +124,7 @@
     height: 100%; 
     object-fit: cover; 
   }
-  .social-login{
-    display: flex;
-    height: 100px;
-    width: 100px;
-    align-items: center;
-  }
+  
   .social-login img{
     height: 100px;
     width: 100px;
