@@ -61,6 +61,7 @@
 }
 .productdisplay-right button{
     
+    margin-top: 0px;
     padding: 20px 20px;
     width: 200px;
     font-size: 16px;
@@ -73,10 +74,12 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
-
+    margin-left: 40px;
 }
 .productdisplay-right-stars img{
     height: 50px;
     width: 50px;
+}
+.productdisplay-right-stars {
+    justify-content: center;
 }

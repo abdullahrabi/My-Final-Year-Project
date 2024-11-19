@@ -6,11 +6,7 @@
     margin: 0;
     background: linear-gradient(to right, #264727,#08130a, #4d7144, rgb(11, 102, 35));
     font-weight: bold;
- 
- 
-  }
-  
- 
+ }
   .loginsignup-left {
     width: 50%;
     display: flex;
