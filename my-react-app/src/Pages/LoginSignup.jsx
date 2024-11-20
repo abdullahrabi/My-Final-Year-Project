@@ -16,14 +16,14 @@ const LoginSignup = () => {
   const leftAnimation = useSpring({
     transform: isSwapped ? 'translateX(100%)' : 'translateX(0%)',
     opacity: isSwapped ? 0.8 : 1, // Optional opacity change during swap
-    config: { tension: 200, friction: 20 }, // Adjust speed and smoothness
+    config: { tension: 1000, friction: 60 }, // Adjust speed and smoothness
   });
 
   // Spring animation for the right section (image)
   const rightAnimation = useSpring({
     transform: isSwapped ? 'translateX(-100%)' : 'translateX(0%)',
     opacity: isSwapped ? 0.8 : 1, // Optional opacity change during swap
-    config: { tension: 200, friction: 20 }, // Adjust speed and smoothness
+    config: { tension: 1000, friction: 60 }, // Adjust speed and smoothness
   });
 
   return (
