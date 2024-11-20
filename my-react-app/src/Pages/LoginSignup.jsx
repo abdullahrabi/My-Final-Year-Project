@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
-import './CSS/LoginSignup.css';
-import loginImage from '../Components/Assests/Login.jpg'; 
-import google from '../Components/Assests/google.jpg'; 
-import { useSpring, animated } from '@react-spring/web';
+import './CSS/LoginSignup.css'; // Your custom CSS
+import { useSpring, animated } from '@react-spring/web'; // React Spring for animations
+import login_icon from '../Components/Assests/Login.jpg';
+import google_icon from '../Components/Assests/google.jpg';
+
 const LoginSignup = () => {
   const [isSwapped, setIsSwapped] = useState(false);
 
+  // Toggle function for swapping
   const handleToggle = () => {
     setIsSwapped(!isSwapped);
   };
 
+  // Spring animation for the left section (login/signup form)
+  const leftAnimation = useSpring({
+    transform: isSwapped ? 'translateX(100%)' : 'translateX(0%)',
+    opacity: isSwapped ? 0.8 : 1, // Optional opacity change during swap
+    config: { tension: 200, friction: 20 }, // Adjust speed and smoothness
+  });
+
+  // Spring animation for the right section (image)
+  const rightAnimation = useSpring({
+    transform: isSwapped ? 'translateX(-100%)' : 'translateX(0%)',
+    opacity: isSwapped ? 0.8 : 1, // Optional opacity change during swap
+    config: { tension: 200, friction: 20 }, // Adjust speed and smoothness
+  });
+
   return (
-    <span className={`loginsignup-page ${isSwapped ? 'swapped' : ''}`}>
-      <span className="loginsignup-left">
-        <span className="loginsignup-container">
+    <div className="loginsignup-page">
+      {/* Left Section (Login/Signup form) with React Spring animation */}
+      <animated.div className="loginsignup-left" style={leftAnimation}>
+        <div className="loginsignup-container">
           <h1>{isSwapped ? 'Sign Up' : 'Login'}</h1>
-          <span className="loginsignup-fields">
+          <div className="loginsignup-fields">
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
             {isSwapped && (
@@ -24,29 +41,28 @@ const LoginSignup = () => {
                 <input type="password" placeholder="Confirm Password" />
               </>
             )}
-          </span>
-          <span className='loginsignup-remember'>
+          </div>
+          <div className="loginsignup-remember">
             <input type="checkbox" />
             <label>Remember me</label>
             <a href="#">Forgot your password?</a>
-          </span>
+          </div>
           <button className="login-button">{isSwapped ? 'Sign Up' : 'Login'}</button>
           <button className="toggle-button" onClick={handleToggle}>
-        {isSwapped ? 'Already have an account? Login here' : 'Don’t have an account? Sign up here'}
-      </button>
-          <p className="loginsignup-or">OR</p>
-          <span className="social-login">
-            <a href="#"><img src={google} alt="Google login" /><i className="fab fa-google"></i></a>
-          </span>
-        </span>
-      </span>
+            {isSwapped ? 'Already have an account? Login here' : 'Don’t have an account? Sign up here'}
+          </button>
+            <h3>OR</h3>
+            <a href="#"><img src={google_icon} alt="Google login" /></a>
+            
+         
+        </div>
+      </animated.div>
 
-      <span className="loginsignup-right">
-        <img src={loginImage} alt="Our Store Welcome Page" />
-      </span>
-
-    
-    </span>
+      {/* Right Section (Image) with React Spring animation */}
+      <animated.div className="loginsignup-right" style={rightAnimation}>
+        <img src={login_icon} alt="Welcome" />
+      </animated.div>
+    </div>
   );
 };
 
