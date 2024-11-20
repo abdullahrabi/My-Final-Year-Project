@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import './CSS/LoginSignup.css';
 import loginImage from '../Components/Assests/Login.jpg'; 
 import google from '../Components/Assests/google.jpg'; 
-
+import { useSpring, animated } from '@react-spring/web';
 const LoginSignup = () => {
-  const [isSwapped, setIsSwapped] = useState(false); // state to track whether the form is swapped
+  const [isSwapped, setIsSwapped] = useState(false);
 
   const handleToggle = () => {
-    setIsSwapped(!isSwapped); 
+    setIsSwapped(!isSwapped);
   };
 
   return (
-    <div className={`loginsignup-page ${isSwapped ? 'swapped' : ''}`}>
+    <span className={`loginsignup-page ${isSwapped ? 'swapped' : ''}`}>
       <span className="loginsignup-left">
         <span className="loginsignup-container">
           <h1>{isSwapped ? 'Sign Up' : 'Login'}</h1>
@@ -46,7 +46,7 @@ const LoginSignup = () => {
       </span>
 
     
-    </div>
+    </span>
   );
 };
 
