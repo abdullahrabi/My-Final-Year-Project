@@ -1,6 +1,17 @@
-.menu{
-   
-    display: flex;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto; 
+     
+  }
+
+
+
+.menu-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 70px;
     text-align: center;
     color: black;
     font-family: 'Montserrat';
@@ -13,13 +24,16 @@
     cursor: pointer;
     justify-content: center;
     position: relative;
-    overflow-x: hidden;
+   
+   
     
 }
-.menu img{
+.menu-1 img{
     height: 200px;
+    width: 210px;
+  
 }
-.menu img:hover{
+.menu-1 img:hover{
     transform: scale(1.05);
     transition: 0.6s;
 }
@@ -28,7 +42,7 @@
     color: inherit;
     background-color: transparent; 
 }
-.Link1 h3:hover{
+.Link1 h4:hover{
     color: rgb(11, 102, 35);
     font-weight: 1000;
     font-size: larger;
@@ -41,7 +55,7 @@
     text-decoration: none;
     color: inherit;
 }
-.Link2 h3:hover{
+.Link2 h4:hover{
     color:rgb(11, 102, 35);
     font-weight: 1000;
    font-size: larger;
@@ -54,59 +68,37 @@
     text-decoration: none;
     color: inherit;
 }
-.Link3 h3:hover{
+.Link3 h4:hover{
     color:rgb(11, 102, 35);
     border-radius: 4px;
     font-weight: 1000;
     font-size: larger;
 }
 
-.Link3 h3:active{
+.Link3 h4:active{
     text-decoration: underline;
 }
-.menu h3{
+.menu-1 h4{
     color: black;
     font-family: 'Montserrat';
-    font-size: 25px;
-    margin-top: 20px;
-}
-.menu-bottom{
-    display: flex;
-    text-align: center;
-    color: black;
-    font-family: 'Montserrat';
-    font-size: 20px;
-    gap: 150px;
-    margin-top: 100px;
-    margin-left: 240px;
-    margin-right: 240px;
-    align-items: center;
-    cursor: pointer;
-    justify-content: center;
+    font-size: 23px;
+    margin-top: 10px;
+   
 }
 
-.menu-bottom img{
-    height: 200px;
-    border-radius: 50%;
-}
-.menu-bottom img:hover{
-    transform: scale(1.05);
-    transition: 0.6s;    
-
-}
 .Link4{
     text-decoration: none;
     color: inherit;
     
 }
-.Link4 h3:hover{
+.Link4 h4:hover{
     color:rgb(11, 102, 35);
     font-weight: 1000;
     font-size: larger;
 
    
 }
-.Link4 h3:active{
+.Link4 h4:active{
     text-decoration: underline;
     
 }
@@ -115,14 +107,14 @@
     color: inherit;
     
 }
-.Link5 h3:hover{
+.Link5 h4:hover{
     color:rgb(11, 102, 35);
     font-weight: 1000;
     font-size: larger;
 
     
 }
-.Link5 h3:active{
+.Link5 h4:active{
     text-decoration: underline;
    
 }
@@ -131,41 +123,16 @@
     color: inherit;
     
 }
-.Link6 h3:hover{
+.Link6 h4:hover{
     color:rgb(11, 102, 35);
     font-weight: 1000;
     font-size: larger;
 
     
 }
-.Link6 h3:active{
+.Link6 h4:active{
     text-decoration: underline;
    
-}
-.List-Items {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    margin-left: 30px;
-    margin-top: 50px;
- }
-.Link7{
-    text-decoration: none;
-    color: inherit;
-}
-.List-Items h2:hover{
-    color:rgb(11, 102, 35);   
-}
-.List-Items:active{
-    text-decoration: underline;
-}
-.item-prices{
-    margin-left: 32px;
-}
-.menu-bottom h3{
-    color: black;
-    font-family: 'Montserrat';
-    font-size: 25px;
-    margin-top: 20px;
 }
 .menu-2{
   
@@ -175,6 +142,8 @@
     align-items: center;
     margin: auto;
     margin-left: 60px;
+    position: relative;
+    
 
 }
 

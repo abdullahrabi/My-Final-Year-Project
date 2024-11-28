@@ -20,7 +20,12 @@ const Product = () => {
     <Breadcrum product={product}/>
     <ProductDisplay product={product}/>
     <DescriptionBox/>
-    <RelatedProducts category={product.category}/>
+    {product && (
+        <RelatedProducts 
+          category={product.category} 
+          selectedProductId={product.id}  // This is where selectedProductId is passed
+        />
+      )}
       
     </div>
   )
