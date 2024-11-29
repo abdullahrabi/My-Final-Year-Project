@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSpring, animated } from '@react-spring/web'; // React Spring for animations
+import { useInView } from 'react-intersection-observer'; // For detecting scroll into view
 import './CSS/Home.css';
 import grocery from '../Components/Assests/grocery.png';
 import Electronics from '../Components/Assests/Electronics.png';
@@ -14,53 +16,36 @@ import skin from '../Components/Assests/skin.png';
 import home from '../Components/Assests/home.png';
 import The_Latest from '../Components/The_Latest/The_Latest';
 import NewsLetter from '../Components/NewsLetter/NewsLetter';
-import Hero from '../Components/Hero/Hero'
-// Import React Spring
-import { useSpring, animated } from '@react-spring/web'; // React Spring for animations
+import Hero from '../Components/Hero/Hero';
 
 const Home = () => {
-  // Animation for each section (fade up)
-  const slideInFromBottom1 = useSpring({
-    from: { opacity: 0, transform: 'translateY(50px)' }, // Starting point: below the screen
-    to: { opacity: 1, transform: 'translateY(0)' },     // Final point: placed in the original position
-    config: { tension: 280, friction: 80 },
-    delay: 800,   // Delay for menu-1
-  });
+  // Create a helper function to manage scroll-triggered animations
+  const useScrollAnimation = (delay) => {
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+    
+    const animationProps = useSpring({
+      from: { opacity: 0, transform: 'translateY(50px)' },
+      to: { opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(50px)' },
+      config: { tension: 800, friction: 60 },
+      delay: 80,
+    });
 
-  const slideInFromBottom2 = useSpring({
-    from: { opacity: 0, transform: 'translateY(50px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    config: { tension: 280, friction: 80 },
-    delay: 2000,   // Delay for Popular
-  });
+    return [ref, animationProps];
+  };
 
-  const slideInFromBottom3 = useSpring({
-    from: { opacity: 0, transform: 'translateY(50px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    config: { tension: 280, friction: 80 },
-    delay: 3200,   // Delay for menu-2
-  });
-
-  const slideInFromBottom4 = useSpring({
-    from: { opacity: 0, transform: 'translateY(50px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    config: { tension: 280, friction: 80 },
-    delay: 4400,   // Delay for The_Latest
-  });
-
-  const slideInFromBottom5 = useSpring({
-    from: { opacity: 0, transform: 'translateY(50px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    config: { tension: 280, friction: 80 },
-    delay: 5600,  // Delay for Newsletter
-  });
+  // Apply scroll animations with delays to each section
+  const [menu1Ref, menu1Spring] = useScrollAnimation(800);
+  const [popularRef, popularSpring] = useScrollAnimation(800);
+  const [menu2Ref, menu2Spring] = useScrollAnimation(800);
+  const [latestRef, latestSpring] = useScrollAnimation(800);
+  const [newsletterRef, newsletterSpring] = useScrollAnimation(800);
 
   return (
     <div>
-      <Hero />  {/* Keeping Hero as is */}
+      <Hero /> {/* Keeping Hero as is */}
 
-      {/* Animating sections with individual springs */}
-      <animated.div style={slideInFromBottom1}>
+      {/* Menu 1 with scroll animation */}
+      <animated.div style={menu1Spring} ref={menu1Ref}>
         <div className='menu-1'>
           <Link className='Link1' to='/Grocery'>
             <img src={grocery} alt="Grocery Icon" />
@@ -89,11 +74,13 @@ const Home = () => {
         </div>
       </animated.div>
 
-      <animated.div style={slideInFromBottom2}>
+      {/* Popular Section with scroll animation */}
+      <animated.div style={popularSpring} ref={popularRef}>
         <Popular />
       </animated.div>
 
-      <animated.div style={slideInFromBottom3}>
+      {/* Menu 2 with scroll animation */}
+      <animated.div style={menu2Spring} ref={menu2Ref}>
         <div className='menu-2'>
           <Link to='/Perfume'>
             <img src={per} alt="Perfume Icon" />
@@ -110,11 +97,13 @@ const Home = () => {
         </div>
       </animated.div>
 
-      <animated.div style={slideInFromBottom4}>
+      {/* The Latest Section with scroll animation */}
+      <animated.div style={latestSpring} ref={latestRef}>
         <The_Latest />
       </animated.div>
 
-      <animated.div style={slideInFromBottom5}>
+      {/* Newsletter Section with scroll animation */}
+      <animated.div style={newsletterSpring} ref={newsletterRef}>
         <NewsLetter />
       </animated.div>
     </div>
