@@ -27,18 +27,19 @@ const Home = () => {
       from: { opacity: 0, transform: 'translateY(50px)' },
       to: { opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(50px)' },
       config: { tension: 800, friction: 60 },
-      delay: 80,
+      delay: delay,
     });
 
     return [ref, animationProps];
   };
 
   // Apply scroll animations with delays to each section
-  const [menu1Ref, menu1Spring] = useScrollAnimation(800);
-  const [popularRef, popularSpring] = useScrollAnimation(800);
-  const [menu2Ref, menu2Spring] = useScrollAnimation(800);
-  const [latestRef, latestSpring] = useScrollAnimation(800);
-  const [newsletterRef, newsletterSpring] = useScrollAnimation(800);
+  const [menu1Ref, menu1Spring] = useScrollAnimation(300);
+  const [popularRef, popularSpring] = useScrollAnimation(500);
+  const [menu2Ref, menu2Spring] = useScrollAnimation(700);
+  const [latestRef, latestSpring] = useScrollAnimation(900);
+  const [newsletterRef, newsletterSpring] = useScrollAnimation(1100);
+  
 
   return (
     <div>
@@ -106,6 +107,9 @@ const Home = () => {
       <animated.div style={newsletterSpring} ref={newsletterRef}>
         <NewsLetter />
       </animated.div>
+      
+     
+  
     </div>
   );
 };
