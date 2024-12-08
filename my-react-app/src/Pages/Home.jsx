@@ -37,8 +37,8 @@ const Home = () => {
   const [menu1Ref, menu1Spring] = useScrollAnimation(300);
   const [popularRef, popularSpring] = useScrollAnimation(500);
   const [menu2Ref, menu2Spring] = useScrollAnimation(700);
-  const [latestRef, latestSpring] = useScrollAnimation(900);
-  const [newsletterRef, newsletterSpring] = useScrollAnimation(1100);
+  const [latestRef, latestSpring] = useScrollAnimation(500);
+  const [newsletterRef, newsletterSpring] = useScrollAnimation(500);
   
 
   return (
