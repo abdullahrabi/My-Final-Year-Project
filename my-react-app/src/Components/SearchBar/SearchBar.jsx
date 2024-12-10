@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SearchBar.css';
-
+import search from '../Assests/search.png'
 const SearchBar = () => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
@@ -25,9 +25,8 @@ const SearchBar = () => {
           onChange={(e) => setQuery(e.target.value)}
           className="search-input"
         />
-        <button type="submit" className="search-icon">
-          🔍
-        </button>
+        
+       
       </form>
     </div>
   );
