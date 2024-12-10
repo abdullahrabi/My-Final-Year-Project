@@ -31,16 +31,16 @@ const Footer = () => {
           <li>RAWALPINDI</li>
         </ul>
         <ul>
-          <Link   className='link1' to ='/Fruits_Vegetables'><li>Fruits & Vegetables</li></Link>
-          <Link   className='link2' to ='Grocery'> <li>Grocery</li></Link>
-          <Link   className='link3' to ='Electronics'> <li>Electronics</li></Link>
-          <Link   className='link4' to ='Perfume'> <li>Perfume</li></Link>
-          <Link   className='link5' to ='Makeup'><li>Makeup</li></Link>
-          <Link   className='link6' to ='Skincare'> <li>Skincare</li></Link>
+          <Link   className='link1' to ='/Fruits_Vegetables' onClick={window.scrollTo(0,0)}><li>Fruits & Vegetables</li></Link>
+          <Link   className='link2' to ='Grocery' onClick={window.scrollTo(0,0)}> <li>Grocery</li></Link>
+          <Link   className='link3' to ='Electronics' onClick={window.scrollTo(0,0)}> <li>Electronics</li></Link>
+          <Link   className='link4' to ='Perfume' onClick={window.scrollTo(0,0)}> <li>Perfume</li></Link>
+          <Link   className='link5' to ='Makeup' onClick={window.scrollTo(0,0)}><li>Makeup</li></Link>
+          <Link   className='link6' to ='Skincare' onClick={window.scrollTo(0,0)}> <li>Skincare</li></Link>
        </ul>
         <ul>
           <li>Customer Service</li>
-          <Link   className='link7'  to='/login'><li>My Account</li></Link>
+          <Link   className='link7'  to='/login' onClick={window.scrollTo(0,0)}><li>My Account</li></Link>
           <li>Contact US</li>
           <li>Cash On Delivery Service</li>
           <li>Terms & Condition</li>
