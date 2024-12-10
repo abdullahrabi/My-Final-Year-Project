@@ -1,6 +1,4 @@
-import { useSpring, animated } from '@react-spring/web';
 import './Slideshow.css';
-import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 
 const Slideshow = ({ slides }) => {

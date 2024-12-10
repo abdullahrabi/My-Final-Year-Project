@@ -5,6 +5,8 @@ import cart_icon from '../Assests/cart_icon.png'
 import login_icon from '../Assests/login_icon.png'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
+import SearchBar from '../SearchBar/SearchBar'
+
 
 const Navbar = () => {
   
@@ -18,7 +20,7 @@ const Navbar = () => {
         <img src={logo} alt="La Organic Store Logo" />
         <p><b>Organic Store</b></p>
       </div>
-  
+    <SearchBar/>
       <div className='nav-login-cart'>
         <Link to='/login'>
           <img src={login_icon} alt="Login Icon" />
