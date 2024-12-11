@@ -12,7 +12,12 @@ const SearchResults = () => {
   const filteredResults = all_product.filter((product) =>
     product.name.toLowerCase().includes(searchQuery) || product.category.toLowerCase().includes(searchQuery)
   );
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
   return (
     <div className='searchbar-container'>
       <h2>Search Results for "{searchQuery}"</h2>
@@ -23,9 +28,10 @@ const SearchResults = () => {
               <Item
                 id={product.id}
                 name={product.name}
-                image={product.image}
+                image={product.image} 
                 new_price={product.new_price}
                 old_price={product.old_price}
+                scrollToTop={scrollToTop} // Pass the function to Item
               />
             </li>
           ))}

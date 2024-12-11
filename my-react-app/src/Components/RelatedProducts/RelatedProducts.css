@@ -42,3 +42,17 @@
     height: 350px;
     width: 350px;
 }
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Fixed near the bottom of the page */
+    right: 20px;  /* Fixed near the right side of the page */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top of other content */
+    opacity: 1;
+    display: block;
+    transition: opacity 0.3s ease;
+    background: transparent;
+    
+  }

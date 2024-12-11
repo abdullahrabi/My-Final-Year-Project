@@ -18,11 +18,12 @@ function App() {
     <div >
 
           <BrowserRouter>
-          
+       
             
-          <Navbar/>
+            <Navbar/>
+            
         
-
+          
           <Routes>
 
             <Route path='/' element={<Home/>}/>
