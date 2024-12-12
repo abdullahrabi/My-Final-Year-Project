@@ -51,6 +51,11 @@ body, html {
 
     height:45px;
 }
+.navbar-logo a { /* Targeting the Link component */
+    display: flex; /* Ensures the Link behaves as a flex container */
+    align-items: center; /* Aligns items vertically centered */
+    text-decoration: none; /* Prevents the default underline on Link */
+}
 
 
 .nav-login-cart {

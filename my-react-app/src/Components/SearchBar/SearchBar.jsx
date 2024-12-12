@@ -24,9 +24,11 @@ const SearchBar = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="search-input"
+         
         />
         
-       
+        <img src={search} onClick={handleSubmit} alt="" />
+     
       </form>
     </div>
   );
