@@ -3,9 +3,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     width: 100%;
-   
 }
-
 
 .navbar {
     display: flex;
@@ -13,21 +11,16 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
- 
-   
 }
-
 
 .navbar-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(11, 102, 35);
-    height:90px;
+    height: 90px;
     border-bottom: 2px solid #ddd;
-    width:100%;
-    
+    width: 100%;
 }
 
 .navbar-logo {
@@ -38,68 +31,56 @@ body, html {
 }
 
 .navbar-logo p {
-    margin-top: 0px;
-    margin: 0;
+    margin-top: 0;
     margin-left: 10px;
     font-weight: bold;
-    color:white;
-    margin-right: 0px;
-    font-family: 'Montserrat';
+    color: white;
     font-size: 25px;
 }
-.navbar-logo img{
 
-    height:45px;
-}
-.navbar-logo a { /* Targeting the Link component */
-    display: flex; /* Ensures the Link behaves as a flex container */
-    align-items: center; /* Aligns items vertically centered */
-    text-decoration: none; /* Prevents the default underline on Link */
+.navbar-logo img {
+    height: 45px;
 }
 
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
 .nav-login-cart {
     display: flex;
     align-items: center;
-
+    position: relative;
+    gap: 5px;
 }
-.nav-login-cart img{
 
-    margin-right: 0px;
-    height:60px;
-    margin-right: 35px;
-
+.nav-login-cart img {
+    height: 60px;
+    margin-right: 15px;
 }
-.nav-cart-count{
 
+.nav-cart-count {
     width: 22px;
     height: 22px;
     display: flex;
     justify-content: center;
-    margin-top: -35px;
-    margin-left: -45px;
-    border-radius: 10px;
-    font-size: 14px;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 15px;
     background: green;
-    margin-right: 10px;
     color: white;
- 
- 
-  }
-  .navbar-top{
-    width: 100%;
-    
-  }
- 
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
 
 .navbar-bottom {
-    background-color:black;
+    background-color: black;
     margin-top: -5px;
     padding: 10px 20px;
     color: white;
-    height:fit-content;
-   
-    
+    height: fit-content;
 }
 
 .nav-menu {
@@ -109,13 +90,12 @@ body, html {
     margin-left: 90px;
     display: flex;
     justify-content: center;
- 
+
 }
 
 .nav-menu li {
-    margin: 0 15px; 
+    margin: 0 15px;
     position: relative;
-    justify-content: center;
     text-decoration: none;
 }
 
@@ -125,7 +105,6 @@ body, html {
     font-size: 1rem;
     padding: 10px;
     display: block;
-
 }
 
 .nav-menu li a:hover {
@@ -138,7 +117,7 @@ body, html {
     bottom: 0;
     left: 0;
     right: 0;
-    border:white;
+    border: white;
     border-radius: 10px;
     height: 2px;
     background-color: #fff;
