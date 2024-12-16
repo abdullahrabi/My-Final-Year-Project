@@ -10,7 +10,7 @@ const SearchResults = () => {
 
   // Filter products based on search query
   const filteredResults = all_product.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery) || product.category.toLowerCase().includes(searchQuery)
+    product.name.toLowerCase().includes(searchQuery)
   );
   const scrollToTop = () => {
     window.scrollTo({

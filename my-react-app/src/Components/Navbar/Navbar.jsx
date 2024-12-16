@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect,useRef } from 'react';
 import './Navbar.css';
 import logo from '../Assests/logo.png';
 import cart_icon from '../Assests/cart_icon.png';
@@ -6,12 +6,12 @@ import login_icon from '../Assests/login_icon.png';
 import { Link, useLocation } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
 import SearchBar from '../SearchBar/SearchBar';
-
+import dropdown from '../Assests/dropdown_icon.png'
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const { getTotalCartItems } = useContext(ShopContext);
   const location = useLocation();
-
+  
   // Update the menu state based on the current pathname
   useEffect(() => {
     const currentPath = location.pathname;
@@ -55,6 +55,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-bottom">
+
         <ul className="nav-menu">
           <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/" onClick={() => setMenu("Home")}>Home</Link>{menu === "Home" ? <hr /> : null}</li>
           <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Grocery" onClick={() => setMenu("Grocery")}>Grocery</Link>{menu === "Grocery" ? <hr /> : null}</li>
