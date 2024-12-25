@@ -165,9 +165,10 @@ body, html {
    
     .nav-menu {
         gap: 0px;
+        
     }
     .nav-menu li a {
-        font-size: 10px; 
+        font-size: 8px; 
     }
     .nav-login-cart img {
         height: 30px;
@@ -207,6 +208,7 @@ body, html {
         font-size: 50%;
         display: flex;
     }
+  
    
  }
 

@@ -52,8 +52,10 @@ const LoginSignup = () => {
             {isSwapped ? 'Already have an account? Login here' : 'Don’t have an account? Sign up here'}
           </button>
             <h3>OR</h3>
-            <a href="#"><img src={google_icon} alt="Google login" /></a>
-            
+            <form className="google-form">
+            <img src={google_icon} alt="Google login"  />
+            <button type="submit" className="google-button">Continue with Google</button>
+          </form>
          
         </div>
       </animated.div>
