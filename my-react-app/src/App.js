@@ -8,9 +8,7 @@ import LoginSignup from './Pages/LoginSignup';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart'
 import SearchResults  from './Pages/SearchResults'
-
 import Footer from './Components/Footer/Footer'
-
 
 function App() {
  

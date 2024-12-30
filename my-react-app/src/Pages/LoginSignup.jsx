@@ -4,6 +4,7 @@ import { useSpring, animated } from '@react-spring/web'; // React Spring for ani
 import login_icon from '../Components/Assests/Login.jpg';
 import google_icon from '../Components/Assests/google.jpg';
 
+
 const LoginSignup = () => {
   const [isSwapped, setIsSwapped] = useState(false);
 
@@ -33,7 +34,7 @@ const LoginSignup = () => {
         <div className="loginsignup-container">
           <h1>{isSwapped ? 'Sign Up' : 'Login'}</h1>
           <div className="loginsignup-fields">
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email  " />
             <input type="password" placeholder="Password" />
             {isSwapped && (
               <>
@@ -53,8 +54,6 @@ const LoginSignup = () => {
           </button>
             <h3>OR</h3>
             <a href="#"><img src={google_icon} alt="Google login" /></a>
-            
-         
         </div>
       </animated.div>
 
