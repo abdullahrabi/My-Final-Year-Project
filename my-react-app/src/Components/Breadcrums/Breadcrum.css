@@ -1,4 +1,4 @@
-.breadcrum{
+.breadcrum {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -6,11 +6,21 @@
     font-size: 16px;
     font-weight: 600;
     margin: 60px 170px;
-    
-   
+    text-transform: uppercase; 
 }
-.breadcrum img{
+
+.breadcrum img {
     height: 10px;
     width: 20px;
-    
+}
+
+.breadcrum a {
+    color: #5e5e5e;      
+    text-decoration: none; 
+    text-transform: uppercase; 
+}
+
+.breadcrum a:hover {
+    color: black; 
+    font-weight: 800;   
 }

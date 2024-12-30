@@ -130,6 +130,8 @@
     margin: auto;
     margin-left: 60px;
     position: relative;
+    align-content: center;
+    align-self: center;
     
 
 }

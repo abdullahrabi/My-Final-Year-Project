@@ -17,8 +17,6 @@ const Slideshow = ({ slides }) => {
   // Use effect to auto slide every 3 seconds
   useEffect(() => {
     const slideInterval = setInterval(nextSlide, 3000);
-
-    // Clear the interval when the component is unmounted
     return () => clearInterval(slideInterval);
   }, [currentSlide, slides.length]);
 

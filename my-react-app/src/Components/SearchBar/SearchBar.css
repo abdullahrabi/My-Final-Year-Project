@@ -59,10 +59,19 @@
   .search-bar-container img {
     width: 35px;
   }
+  .search-input {
+    font-size: 12px;
+    padding: 10px;
+    width: 80%;
+  }
 }
 @media(max-width:800px){
+  .search-bar-container {
+    max-width: 40%;
+    max-height: 60%;
+  }
   .search-bar-container img {
-    width: 17px;
+    width: 10%;
   }
 }
 
