@@ -21,8 +21,8 @@
   opacity: 1; /* Default visibility */
   transition: transform 0.5s ease, opacity 0.5s ease;
   flex-direction: column;
-  
   height: 100%;
+  
 }
 .loginsignup-left img{
   height: 150px;
@@ -73,7 +73,7 @@ h3{
   
   font-size: 36px;
   color: white;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .loginsignup-remember label {
