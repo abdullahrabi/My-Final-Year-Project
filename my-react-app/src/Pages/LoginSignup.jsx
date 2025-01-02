@@ -19,24 +19,22 @@ const PasswordInput = ({ placeholder }) => {
         type={passwordVisible ? 'text' : 'password'}
         placeholder={placeholder}
         required
-       />
+      />
       <button
         type="button"
         onClick={togglePasswordVisibility}
         className="eye-icon-button"
-       
       >
         <img 
           src={passwordVisible ? eye_icon : eye_off_icon} 
           alt="Toggle visibility" 
-         
         />
       </button>
     </div>
   );
 };
 
-const LoginForm = () => {
+const LoginForm = ({ onToggle }) => {
   // Handler for form submission
   const handleLoginSubmit = (e) => {
     e.preventDefault();
@@ -57,16 +55,19 @@ const LoginForm = () => {
         <a href="#">Forgot your password?</a>
       </div>
       <button type="submit" className="login-button">Login</button>
+      <button className="toggle-button" onClick={onToggle}>
+        Don’t have an account? Sign up here
+      </button>
       <h3>OR</h3>
       <div className="google-form">
         <img src={google_icon} alt="Google login" />
         <button type="button" className="google-button">Continue with Google</button>
       </div>
-    </form>
+     </form>
   );
 };
 
-const SignupForm = () => {
+const SignupForm = ({ onToggle }) => {
   // Handler for form submission
   const handleSignupSubmit = (e) => {
     e.preventDefault();
@@ -83,11 +84,16 @@ const SignupForm = () => {
         <input type="text" placeholder="Username" required />
       </div>
       <button type="submit" className="login-button">Sign Up</button>
+      <button className="toggle-button" onClick={onToggle}>
+        Already have an account? Login here
+      </button>
       <h3>OR</h3>
       <div className="google-form">
         <img src={google_icon} alt="Google signup" />
         <button type="button" className="google-button">Continue with Google</button>
       </div>
+     
+     
     </form>
   );
 };
@@ -118,10 +124,7 @@ const LoginSignup = () => {
     <div className="loginsignup-page">
       {/* Left Section (Login/Signup form) with React Spring animation */}
       <animated.div className="loginsignup-left" style={leftAnimation}>
-        {isSwapped ? <SignupForm /> : <LoginForm />}
-        <button className="toggle-button" onClick={handleToggle}>
-          {isSwapped ? 'Already have an account? Login here' : 'Don’t have an account? Sign up here'}
-        </button>
+        {isSwapped ? <SignupForm onToggle={handleToggle} /> : <LoginForm onToggle={handleToggle} />}
       </animated.div>
 
       {/* Right Section (Image) with React Spring animation */}
