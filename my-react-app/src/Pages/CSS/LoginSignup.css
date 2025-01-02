@@ -20,6 +20,9 @@
   transform: translateX(0); /* Default position */
   opacity: 1; /* Default visibility */
   transition: transform 0.5s ease, opacity 0.5s ease;
+  flex-direction: column;
+  
+  height: 100%;
 }
 .loginsignup-left img{
   height: 150px;
@@ -75,12 +78,15 @@ h3{
 
 .loginsignup-remember label {
   font-size: 18px;
+ margin-left: 5px;
 }
 
 .loginsignup-remember a {
   font-size: 18px;
   color: rgb(11, 102, 35);
   text-decoration: none;
+  margin-left: 15px;
+  
 }
 
 .loginsignup-remember a:hover {
@@ -155,16 +161,16 @@ h3{
 }
 
 .toggle-button {
-  width: 100%;
+  width: 70%;
   padding: 15px 0;
-  margin-top: 30px;
-  cursor: pointer;
   background-color: rgb(11, 102, 35);
-  color: white;
   border: none;
   border-radius: 30px;
+  color: white;
   font-size: 18px;
-  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 /* Swapping animations */
@@ -176,4 +182,16 @@ h3{
 .swapped .loginsignup-right {
   transform: translateX(0); /* Slide in to default position */
   opacity: 1; /* Fade in */
+}
+.eye-icon-button{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+}
+.eye-icon-button img{
+    height: 20px;
+    width: 20px;
 }
