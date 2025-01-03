@@ -6,7 +6,7 @@ import login_icon from '../Assests/login_icon.png';
 import { Link, useLocation } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
 import SearchBar from '../SearchBar/SearchBar';
-import dropdown from '../Assests/dropdown_icon.png'
+
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const { getTotalCartItems } = useContext(ShopContext);

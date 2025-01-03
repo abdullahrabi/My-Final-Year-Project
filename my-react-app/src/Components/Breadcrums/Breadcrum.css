@@ -6,7 +6,7 @@
     font-size: 16px;
     font-weight: 600;
     margin: 60px 170px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .breadcrum img {
@@ -15,12 +15,21 @@
 }
 
 .breadcrum a {
-    color: #5e5e5e;      
-    text-decoration: none; 
-    text-transform: uppercase; 
+    color: #5e5e5e; /* Default link color */
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
 }
 
+/* Active link styling */
+.breadcrum a.active {
+    color: black;
+    font-weight: 800;
+}
+
+/* Hover effect for all links */
 .breadcrum a:hover {
-    color: black; 
-    font-weight: 800;   
+    color: black;
+    font-weight: 800;
 }

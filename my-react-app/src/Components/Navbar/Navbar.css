@@ -40,6 +40,8 @@ body, html {
 
 .navbar-logo img {
     height: 45px;
+  
+  
 }
 
 .navbar-logo a {
@@ -53,11 +55,14 @@ body, html {
     align-items: center;
     position: relative;
     gap: 5px;
+
+   
+    
 }
 
 .nav-login-cart img {
     height: 60px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .nav-cart-count {
@@ -73,6 +78,9 @@ body, html {
     position: absolute;
     top: -5px;
     right: 0;
+    left: -5;
+    
+    
 }
 
 .navbar-bottom {
