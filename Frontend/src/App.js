@@ -8,6 +8,8 @@ import LoginSignup from './Pages/LoginSignup';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart'
 import SearchResults  from './Pages/SearchResults'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Footer from './Components/Footer/Footer'
 
@@ -16,6 +18,8 @@ function App() {
  
   return (
     <div >
+      {/* <NotificationContainer /> */}
+      <ToastContainer />
 
           <BrowserRouter>
        

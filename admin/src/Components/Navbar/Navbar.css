@@ -1,23 +1,40 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 10px;
     box-shadow: 0px 1px 3px -2px #000;
     margin-bottom: 1px;
-    background:  black;
+    background: black;
     color: white;
     font-family: 'Montserrat';
 }
 
-.nav-logo{
-    width: 75px;
-    height: 75px;
-    margin-top: 10px;
-    object-fit: cover;
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 22px;
 }
-.nav-profile{
+
+.navbar-logo p {
+    margin: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    margin-right: 1px; /* Adds some space between the image and the text */
+}
+
+.nav-profile {
     width: 75px;
     object-fit: cover;
-
 }
