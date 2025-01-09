@@ -1,17 +1,19 @@
-import React, { useContext, useState, useEffect,useRef } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../Assests/logo.png';
 import cart_icon from '../Assests/cart_icon.png';
 import login_icon from '../Assests/login_icon.png';
+import logout_icon from '../Assests/logout_icon.png';
 import { Link, useLocation } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
 import SearchBar from '../SearchBar/SearchBar';
+import { toast } from 'react-toastify'; // Import toast
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const { getTotalCartItems } = useContext(ShopContext);
   const location = useLocation();
-  
+
   // Update the menu state based on the current pathname
   useEffect(() => {
     const currentPath = location.pathname;
@@ -32,6 +34,15 @@ const Navbar = () => {
     }
   }, [location]);
 
+  // Handle logout
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Remove token from localStorage
+    toast.success("Logout successful!"); // Show logout success toast
+    setTimeout(() => {
+      window.location.replace('/'); // Redirect to homepage after 1 second
+    }, 1000); // Adding a slight delay to allow the toast to show
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-top">
@@ -44,9 +55,15 @@ const Navbar = () => {
         </div>
         <SearchBar />
         <div className="nav-login-cart">
-          <Link to="/login">
-            <img src={login_icon} alt="Login Icon" />
-          </Link>
+          {localStorage.getItem('token') ? (
+            // Show logout icon if user is logged in
+            <img src={logout_icon} alt="Logout Icon" onClick={handleLogout} />
+          ) : (
+            // Show login icon if user is logged out
+            <Link to="/login">
+              <img src={login_icon} alt="Login Icon" />
+            </Link>
+          )}
           <Link to="/cart">
             <img src={cart_icon} alt="Cart Icon" />
           </Link>
@@ -55,19 +72,39 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-bottom">
-
         <ul className="nav-menu">
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/" onClick={() => setMenu("Home")}>Home</Link>{menu === "Home" ? <hr /> : null}</li>
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Grocery" onClick={() => setMenu("Grocery")}>Grocery</Link>{menu === "Grocery" ? <hr /> : null}</li>
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Electronics" onClick={() => setMenu("Electronics")}>Electronics</Link>{menu === "Electronics" ? <hr /> : null}</li>
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Perfume" onClick={() => setMenu("Perfume")}>Perfume</Link>{menu === "Perfume" ? <hr /> : null}</li>
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Makeup" onClick={() => setMenu("Makeup")}>Makeup</Link>{menu === "Makeup" ? <hr /> : null}</li>
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Skincare" onClick={() => setMenu("Skincare")}>Skincare</Link>{menu === "Skincare" ? <hr /> : null}</li>
-          <li><Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Fruits_Vegetables" onClick={() => setMenu("Fruits_Vegetables")}>Fruits & Vegetables</Link>{menu === "Fruits_Vegetables" ? <hr /> : null}</li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/" onClick={() => setMenu("Home")}>Home</Link>
+            {menu === "Home" ? <hr /> : null}
+          </li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Grocery" onClick={() => setMenu("Grocery")}>Grocery</Link>
+            {menu === "Grocery" ? <hr /> : null}
+          </li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Electronics" onClick={() => setMenu("Electronics")}>Electronics</Link>
+            {menu === "Electronics" ? <hr /> : null}
+          </li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Perfume" onClick={() => setMenu("Perfume")}>Perfume</Link>
+            {menu === "Perfume" ? <hr /> : null}
+          </li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Makeup" onClick={() => setMenu("Makeup")}>Makeup</Link>
+            {menu === "Makeup" ? <hr /> : null}
+          </li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Skincare" onClick={() => setMenu("Skincare")}>Skincare</Link>
+            {menu === "Skincare" ? <hr /> : null}
+          </li>
+          <li>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/Fruits_Vegetables" onClick={() => setMenu("Fruits_Vegetables")}>Fruits & Vegetables</Link>
+            {menu === "Fruits_Vegetables" ? <hr /> : null}
+          </li>
         </ul>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
