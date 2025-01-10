@@ -34,9 +34,16 @@ const Navbar = () => {
     }
   }, [location]);
 
+  // Check if the user is logged in based on the token in localStorage or sessionStorage
+  const isLoggedIn = () => {
+    return localStorage.getItem('token') || sessionStorage.getItem('token');
+  };
+
   // Handle logout
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from localStorage
+    // Remove token from both storage options
+    localStorage.removeItem('token');
+    sessionStorage.removeItem('token'); 
     toast.success("Logout successful!"); // Show logout success toast
     setTimeout(() => {
       window.location.replace('/'); // Redirect to homepage after 1 second
@@ -55,7 +62,7 @@ const Navbar = () => {
         </div>
         <SearchBar />
         <div className="nav-login-cart">
-          {localStorage.getItem('token') ? (
+          {isLoggedIn() ? (
             // Show logout icon if user is logged in
             <img src={logout_icon} alt="Logout Icon" onClick={handleLogout} />
           ) : (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CSS/LoginSignup.css'; // Your custom CSS
 import { useSpring, animated } from '@react-spring/web'; // React Spring for animations
 import login_icon from '../Components/Assests/Login.jpg';
@@ -9,7 +9,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';  
 import { useNavigate } from 'react-router-dom';
 
-const PasswordInput = ({ placeholder, onChange }) => {
+// Password Input Component
+const PasswordInput = ({ placeholder, onChange, value, id, name }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -22,7 +23,11 @@ const PasswordInput = ({ placeholder, onChange }) => {
         type={passwordVisible ? 'text' : 'password'}
         placeholder={placeholder}
         required
+        value={value}
         onChange={onChange}
+        id={id}  // Added id
+        name={name}  // Added name
+        autoComplete="current-password" // Added autoComplete for password
       />
       <button
         type="button"
@@ -38,9 +43,11 @@ const PasswordInput = ({ placeholder, onChange }) => {
   );
 };
 
+// Login Form Component
 const LoginForm = ({ onToggle }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false); // State for Remember Me
   const navigate = useNavigate();
 
   const handleLoginSubmit = async (e) => {
@@ -48,7 +55,17 @@ const LoginForm = ({ onToggle }) => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
       const { token } = response.data;
-      localStorage.setItem('token', token);
+
+      // Store the JWT token in localStorage or sessionStorage based on "Remember Me"
+      if (rememberMe) {
+        localStorage.setItem('token', token); // Store token in localStorage
+      } else {
+        sessionStorage.setItem('token', token); // Store token in sessionStorage
+      }
+
+      // Clear password from memory
+      setPassword('');
+
       toast.success("Login Successfully");
       navigate('/');  // Redirect to homepage after login
     } catch (err) {
@@ -57,15 +74,36 @@ const LoginForm = ({ onToggle }) => {
   };
 
   return (
-    <form className="loginsignup-container" onSubmit={handleLoginSubmit}>
+    <form className="loginsignup-container" onSubmit={handleLoginSubmit} autoComplete="on">
       <h1>Login</h1>
       <div className="loginsignup-fields">
-        <input type="email" placeholder="Email" required onChange={(e) => setEmail(e.target.value)} />
-        <PasswordInput placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        <input 
+          type="email" 
+          placeholder="Email" 
+          required 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          autoComplete="email"  // Enable autofill for email
+          id="login-email" // Added id
+          name="email" // Added name
+        />
+        <PasswordInput 
+          placeholder="Password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          id="login-password" // Added id
+          name="password" // Added name
+        />
       </div>
       <div className="loginsignup-remember">
-        <input type="checkbox" />
-        <label>Remember me</label>
+        <input 
+          type="checkbox" 
+          checked={rememberMe} 
+          onChange={(e) => setRememberMe(e.target.checked)} 
+          id="remember-me" // Added id
+          name="rememberMe" // Added name
+        />
+        <label htmlFor="remember-me">Remember me</label>
         <a href="#">Forgot your password?</a>
       </div>
       <button type="submit" className="login-button">Login</button>
@@ -81,6 +119,7 @@ const LoginForm = ({ onToggle }) => {
   );
 };
 
+// Signup Form Component
 const SignupForm = ({ onToggle }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -99,12 +138,35 @@ const SignupForm = ({ onToggle }) => {
   };
 
   return (
-    <form className="loginsignup-container" onSubmit={handleSignupSubmit}>
+    <form className="loginsignup-container" onSubmit={handleSignupSubmit} autoComplete="on">
       <h1>Sign Up</h1>
       <div className="loginsignup-fields">
-        <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-        <PasswordInput placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-        <input type="text" placeholder="Username" required value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input 
+          type="email" 
+          placeholder="Email" 
+          required 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          autoComplete="email"  // Enable autofill for email
+          id="signup-email" // Added id
+          name="email" // Added name
+        />
+        <PasswordInput 
+          placeholder="Password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          id="signup-password" // Added id
+          name="password" // Added name
+        />
+        <input 
+          type="text" 
+          placeholder="Username" 
+          required 
+          value={username} 
+          onChange={(e) => setUsername(e.target.value)} 
+          id="signup-username" // Added id
+          name="username" // Added name
+        />
       </div>
       <button type="submit" className="login-button">Sign Up</button>
       <button className="toggle-button" onClick={onToggle}>
@@ -119,6 +181,7 @@ const SignupForm = ({ onToggle }) => {
   );
 };
 
+// Main LoginSignup Component
 const LoginSignup = () => {
   const [isSwapped, setIsSwapped] = useState(false);
 
@@ -137,6 +200,19 @@ const LoginSignup = () => {
     opacity: isSwapped ? 0.8 : 1,
     config: { tension: 1000, friction: 60 },
   });
+
+  // Clear localStorage on tab close
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.clear(); // Clears localStorage when the tab is closed
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload); // Cleanup on component unmount
+    };
+  }, []);
 
   return (
     <div className="loginsignup-page">
