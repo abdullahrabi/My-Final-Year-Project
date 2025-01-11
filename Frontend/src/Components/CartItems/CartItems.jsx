@@ -1,16 +1,45 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/ShopContext';
 import remove_icon from '../Assests/remove_icon.png';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartItems = () => {
     const { getTotalCartAmount, all_product, cartItems, removeFromCart, updateCartQuantity } = useContext(ShopContext);
-    
+
+    // Check both localStorage and sessionStorage for token
+    const [isAuthenticated, setIsAuthenticated] = useState(
+        localStorage.getItem('token') || sessionStorage.getItem('token') ? true : false
+    );
+
+    // Calculate the total number of items in the cart
+    const totalCartItems = Object.values(cartItems).reduce((sum, quantity) => sum + quantity, 0);
+
+    useEffect(() => {
+        console.log('Cart items:', cartItems);  // Debugging cartItems structure
+        console.log('Total items in cart:', totalCartItems);  // Check if totalCartItems is calculated correctly
+    }, [cartItems]);
+
     // Update cart quantity when user enters it manually
     const handleQuantityChange = (event, productId) => {
         const newQuantity = parseInt(event.target.value, 10);
         if (!isNaN(newQuantity) && newQuantity > 0) {
             updateCartQuantity(productId, newQuantity);  // Call a function to update the cart's quantity
+        }
+    };
+
+    const handleCheckout = () => {
+        if (!isAuthenticated) {
+            // Show a toast message asking the user to log in
+            toast.warning('Kindly Login to Proceed to Checkout');
+        } else if (totalCartItems === 0) {
+            // Show a toast message if there are no items in the cart
+            toast.warning('Please Add Atleast one Item to Your Cart for Checkout');
+        } else {
+            // Proceed to checkout
+            console.log('Proceeding to checkout...');
+            toast.success('Proceeding to Checkout!');
         }
     };
 
@@ -79,7 +108,7 @@ const CartItems = () => {
                             <h3>RS {getTotalCartAmount()}</h3>
                         </div>
                     </div>
-                    <button>PROCEED TO CHECKOUT</button>
+                    <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
                 </div>
                 <div className='cartitems-promocode'>
                     <p>If you have a promo code, Enter it here</p>
