@@ -54,24 +54,38 @@ const LoginForm = ({ onToggle }) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      const { token } = response.data;
-
-      // Store the JWT token in localStorage or sessionStorage based on "Remember Me"
-      if (rememberMe) {
-        localStorage.setItem('token', token); // Store token in localStorage
+      
+      // Add a check to ensure response and response.data exist
+      if (response && response.data && response.data.token) {
+        const { token } = response.data;
+  
+        // Store the JWT token in localStorage or sessionStorage based on "Remember Me"
+        if (rememberMe) {
+          localStorage.setItem('token', token); // Store token in localStorage
+        } else {
+          sessionStorage.setItem('token', token); // Store token in sessionStorage
+        }
+  
+        // Clear password from memory
+        setPassword('');
+  
+        toast.success("Login Successfully");
+        navigate('/');  // Redirect to homepage after login
       } else {
-        sessionStorage.setItem('token', token); // Store token in sessionStorage
+        // Handle cases where response does not contain the expected data
+        toast.error("Unexpected response from the server. Please try again.");
       }
-
-      // Clear password from memory
-      setPassword('');
-
-      toast.success("Login Successfully");
-      navigate('/');  // Redirect to homepage after login
     } catch (err) {
-      toast.error(err.response.data.message);
+      console.error(err); // Log the error for debugging purposes
+      // Check if error response exists
+      if (err.response && err.response.data && err.response.data.message) {
+        toast.error(err.response.data.message);
+      } else {
+        toast.error("An error occurred during login. Please try again later.");
+      }
     }
   };
+  
 
   return (
     <form className="loginsignup-container" onSubmit={handleLoginSubmit} autoComplete="on">
@@ -130,12 +144,26 @@ const SignupForm = ({ onToggle }) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/auth/register', { name: username, email, password });
-      toast.success(response.data.message);
-      navigate('/login');  // Redirect to login page after signup
+      
+      // Add a check to ensure response and response.data exist
+      if (response && response.data && response.data.message) {
+        toast.success(response.data.message);
+        navigate('/login');  // Redirect to login page after signup
+      } else {
+        // Handle cases where response does not contain the expected data
+        toast.error("Unexpected response from the server. Please try again.");
+      }
     } catch (err) {
-      toast.error(err.response.data.message);
+      console.error(err); // Log the error for debugging purposes
+      // Check if error response exists
+      if (err.response && err.response.data && err.response.data.message) {
+        toast.error(err.response.data.message);
+      } else {
+        toast.error("An error occurred during signup. Please try again later.");
+      }
     }
   };
+  
 
   return (
     <form className="loginsignup-container" onSubmit={handleSignupSubmit} autoComplete="on">

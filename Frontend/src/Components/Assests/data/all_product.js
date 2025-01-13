@@ -36,7 +36,19 @@ import p35_img from './E11.jpg'
 import p36_img from './E12.jpg'
 import p37_img from './E13.jpg'
 import p38_img from './E14.jpg'
-
+import p39_img from './P3.jpg'
+import p40_img from './P4.jpg'
+import p41_img from './P5.jpg'
+import p42_img from './P6.jpeg'
+import p43_img from './P7.jpg'
+import p44_img from './P8.jpg'
+import p45_img from './P9.jpg'
+import p46_img from './P10.jpg'
+import p47_img from './P11.jpeg'
+import p48_img from './P12.jpg'
+import p49_img from './P13.jpg'
+import p50_img from './P14.jpg'
+import p51_img from './P15.jpg'
 let all_product = [
     {
         id:1,
@@ -384,6 +396,123 @@ let all_product = [
         image:p38_img,
         new_price:12530,
         old_price:13530,
+    
+    },
+    {
+        id:39,
+        name:"J. –JANAN GOLD MEN",
+        category:"Perfume",
+        image:p39_img,
+        new_price:5610,
+        old_price:6600,
+    
+    },
+    {
+        id:40,
+        name:"Sapphire Men EDT- 100 ML",
+        category:"Perfume",
+        image:p40_img,
+        new_price:7100,
+        old_price:6600,
+    
+    },
+    {
+        id:41,
+        name:"Satrangi–OUD BONANZA MEN",
+        category:"Perfume",
+        image:p41_img,
+        new_price:4980,
+        old_price:5980,
+    
+    },
+    {
+        id:42,
+        name:"JAF-Ayesh Angelica Perfume MEN",
+        category:"Perfume",
+        image:p42_img,
+        new_price: 7990,
+        old_price: 8990,
+    
+    },
+    {
+        id:43,
+        name:"Khaadi –High On Love ",
+        category:"Perfume",
+        image:p43_img,
+        new_price: 4500,
+        old_price: 5000,
+    
+    },
+    {
+        id:44,
+        name:"Sapphire –Rosewood WOMEN",
+        category:"Perfume",
+        image:p44_img,
+        new_price: 5490,
+        old_price: 6000,
+    
+    },
+    {
+        id:45,
+        name:"J. ALL-ROUNDER | SHOAIB MALIK",
+        category:"Perfume",
+        image:p45_img,
+        new_price: 6375,
+        old_price: 7500,
+    
+    },
+    {
+        id:46,
+        name:"Bonanza –RITUAL WOMEN",
+        category:"Perfume",
+        image:p46_img,
+        new_price: 2988,
+        old_price: 4980,
+    
+    },
+    {
+        id:47,
+        name:"FEMME CAPITAl –Women",
+        category:"Perfume",
+        image:p47_img,
+        new_price: 1500,
+        old_price: 1600,
+    
+    },
+    {
+        id:48,
+        name:"IDEAS -Elixir Women",
+        category:"Perfume",
+        image:p48_img,
+        new_price: 5290,
+        old_price: 5390,
+    
+    },
+    {
+        id:49,
+        name:"Amouage Interlude Man",
+        category:"Perfume",
+        image:p49_img,
+        new_price: 61750,
+        old_price: 65000,
+    
+    },
+    {
+        id:50,
+        name:"Tom Ford Oud Wood",
+        category:"Perfume",
+        image:p50_img,
+        new_price: 51300,
+        old_price: 54000,
+    
+    },
+    {
+        id:51,
+        name:"Dior Sauvage Elixir",
+        category:"Perfume",
+        image:p51_img,
+        new_price: 84150,
+        old_price: 99000,
     
     },
     ];

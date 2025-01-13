@@ -74,7 +74,7 @@ const ListProduct = () => {
         <hr />
         {allproducts.length > 0 ? (
           allproducts.map((product, index) => (
-            <div key={index} className="listproduct-format-main listproduct-format">
+            <><div key={index} className="listproduct-format-main listproduct-format">
               <img src={product.image} alt="" className="listproduct-product-icon" />
               <p>{product.name}</p>
               <p>RS {product.old_price}</p>
@@ -87,6 +87,7 @@ const ListProduct = () => {
                 className="listproduct-remove-icon" 
               />
             </div>
+            <hr /></>
           ))
         ) : (
           <p>No products available.</p>
