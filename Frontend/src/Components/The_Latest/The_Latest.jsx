@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './The_Latest.css'
 import Item from "../Item/Item"
-import The_Latest_Data from '../Assests/data/The_Latest'
+
+
 export const The_Latest = () => {
+  const [The_Latest_Data,setThe_Latest_Data] =useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:5000/LatestItems')
+    .then((response)=>response.json())
+    .then((data)=>setThe_Latest_Data(data));
+  },[])
   return (
     <div className='new-collections'>
       <h1>Our Latest Items</h1>

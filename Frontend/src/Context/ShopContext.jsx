@@ -1,29 +1,35 @@
-import React, { createContext, useState } from "react";
-import all_product from "../Components/Assests/data/all_product";
+import React, { createContext, useEffect, useState } from "react";
 
+// Create ShopContext
 export const ShopContext = createContext(null);
-
 const getDefaultCart = () => {
     let cart = {};
-    for (let index = 0; index < all_product.length + 1; index++) {
+    for (let index = 0; index < 300 + 1; index++) {
         cart[index] = 0;
     }
     return cart;
 };
-
 const ShopContextProvider = (props) => {
-    const [cartItems, setCartItems] = useState(getDefaultCart());
+    const [all_product, setAll_Product] = useState([]);
+    const [cartItems, setCartItems] = useState(getDefaultCart());// Start with an empty object
 
-    // Add item to cart
+    // Fetch all products on component mount
+    useEffect(() => {
+        fetch('http://localhost:5000/allproducts')
+            .then((response) => response.json())
+            .then((data) => setAll_Product(data));
+    }, []);
+
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-    };
-
-    // Update the quantity of an item in the cart
+    
+    }
+        
+      
     const updateCartQuantity = (itemId, quantity) => {
         setCartItems((prev) => ({ ...prev, [itemId]: quantity }));
     };
-
+    
     // Remove an item from the cart completely
     const removeFromCart = (itemId, removeCompletely = false) => {
         if (removeCompletely) {
@@ -67,11 +73,11 @@ const ShopContextProvider = (props) => {
     const contextValue = {
         getTotalCartItems,
         getTotalCartAmount,
+        updateCartQuantity,  // Include the new function to update quantity
+        removeFromCart,
         all_product,
         cartItems,
         addToCart,
-        updateCartQuantity,  // Include the new function to update quantity
-        removeFromCart,
     };
 
     return (

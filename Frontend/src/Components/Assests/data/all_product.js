@@ -49,6 +49,19 @@ import p48_img from './P12.jpg'
 import p49_img from './P13.jpg'
 import p50_img from './P14.jpg'
 import p51_img from './P15.jpg'
+import p52_img from './M1.jpg'
+import p53_img from './M2.jpg'
+import p54_img from './M3.jpg'
+import p55_img from './M4.jpg'
+import p56_img from './M5.jpg'
+import p57_img from './M6.jpg'
+import p58_img from './M7.jpg'
+import p59_img from './M8.jpg'
+import p60_img from './M9.jpg'
+import p61_img from './M10.jpg'
+import p62_img from './M11.jpg'
+import p63_img from './M12.jpg'
+import p64_img from './M13.jpg'
 let all_product = [
     {
         id:1,
@@ -412,8 +425,8 @@ let all_product = [
         name:"Sapphire Men EDT- 100 ML",
         category:"Perfume",
         image:p40_img,
-        new_price:7100,
-        old_price:6600,
+        new_price:6600,
+        old_price:7100,
     
     },
     {
@@ -427,7 +440,7 @@ let all_product = [
     },
     {
         id:42,
-        name:"JAF-Ayesh Angelica Perfume MEN",
+        name:"JAF-Ayesha Angelica Perfume MEN",
         category:"Perfume",
         image:p42_img,
         new_price: 7990,
@@ -436,7 +449,7 @@ let all_product = [
     },
     {
         id:43,
-        name:"Khaadi –High On Love ",
+        name:"Khaadi –High On Love",
         category:"Perfume",
         image:p43_img,
         new_price: 4500,
@@ -472,7 +485,7 @@ let all_product = [
     },
     {
         id:47,
-        name:"FEMME CAPITAl –Women",
+        name:"FEMME CAPITAL –Women",
         category:"Perfume",
         image:p47_img,
         new_price: 1500,
@@ -513,6 +526,123 @@ let all_product = [
         image:p51_img,
         new_price: 84150,
         old_price: 99000,
+    
+    },
+    {
+        id:52,
+        name:"Maybelline Fit Me Matte + Poreless Liquid Foundation",
+        category:"Makeup",
+        image:p52_img,
+        new_price: 1500,
+        old_price: 2000,
+    
+    },
+    {
+        id:53,
+        name:"Loreal True Match Super Blendable Foundation",
+        category:"Makeup",
+        image:p53_img,
+        new_price: 3800,
+        old_price: 5000,
+    
+    },
+    {
+        id:54,
+        name:"Revlon ColorStay Full Cover Foundation",
+        category:"Makeup",
+        image:p54_img,
+        new_price: 3375,
+        old_price: 4500,
+    
+    },
+    {
+        id:55,
+        name:"Maybelline Instant Age Rewind Eraser",
+        category:"Makeup",
+        image:p55_img,
+        new_price: 3229,
+        old_price: 3799,
+    
+    },
+    {
+        id:56,
+        name:"SMASHBOX -The Original Photo Finish Smooth & Blur Oil Free",
+        category:"Makeup",
+        image:p56_img,
+        new_price: 9600,
+        old_price: 13200,
+    
+    },
+    {
+        id:57,
+        name:"MAC Powder Blush",
+        category:"Makeup",
+        image:p57_img,
+        new_price: 4850,
+        old_price: 5000,
+    
+    },
+    {
+        id:58,
+        name:"Shimmering Skin Perfector",
+        category:"Makeup",
+        image:p58_img,
+        new_price: 9800,
+        old_price: 10000,
+    
+    },
+    {
+        id:59,
+        name:"HUDA BEAUTY-Obsession Palette",
+        category:"Makeup",
+        image:p59_img,
+        new_price: 5500,
+        old_price: 6500,
+    
+    },
+    {
+        id:60,
+        name:"Maybelline Eye Studio Gel Liner",
+        category:"Makeup",
+        image:p60_img,
+        new_price: 1850,
+        old_price: 3500,
+    
+    },
+    {
+        id:61,
+        name:"Maybelline Lash Sensational Mascara",
+        category:"Makeup",
+        image:p61_img,
+        new_price: 1599,
+        old_price: 1999,
+    
+    },
+    {
+        id:62,
+        name:"Anastasia Beverly Hills Brow Wiz",
+        category:"Makeup",
+        image:p62_img,
+        new_price: 6600,
+        old_price: 7600,
+    
+    },
+    {
+        id:63,
+        name:"Urban Decay All Nighter Setting Spray",
+        category:"Makeup",
+        image:p63_img,
+        new_price:6500,
+        old_price:9600,
+    
+    },
+    {
+        id:64,
+        name:"Fenty Beauty Gloss Bomb Universal Lip Luminizer",
+        category:"Makeup",
+        image:p64_img,
+        new_price:6750,
+        old_price:9000,
     
     },
     ];
