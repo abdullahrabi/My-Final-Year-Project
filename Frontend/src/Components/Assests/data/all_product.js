@@ -62,6 +62,20 @@ import p61_img from './M10.jpg'
 import p62_img from './M11.jpg'
 import p63_img from './M12.jpg'
 import p64_img from './M13.jpg'
+import p65_img from './S1.jpg'
+import p66_img from './S2.jpg'
+import p67_img from './S3.jpg'
+import p68_img from './S4.jpg'
+import p69_img from './S5.jpg'
+import p70_img from './S6.jpg'
+import p71_img from './S7.jpg'
+import p72_img from './S8.jpg'
+import p73_img from './S9.jpg'
+import p74_img from './S10.jpg'
+import p75_img from './S11.jpg'
+import p76_img from './S12.jpg'
+import p77_img from './S13.jpg'
+import p78_img from './S14.jpg'
 let all_product = [
     {
         id:1,
@@ -645,5 +659,133 @@ let all_product = [
         old_price:9000,
     
     },
+    {
+        id:65,
+        name:"Neutrogena Hydro Boost Water Gel",
+        category:"Skincare",
+        image:p65_img,
+        new_price: 2199,
+        old_price: 4799,
+    
+    },
+    {
+        id:66,
+        name:"CeraVe Hydrating Cleanser",
+        category:"Skincare",
+        image:p66_img,
+        new_price: 8900,
+        old_price: 9900,
+    
+    },
+    {
+        id:67,
+        name:"La Roche-Posay Anthelios Melt-in Milk Sunscreen",
+        category:"Skincare",
+        image:p67_img,
+        new_price: 7790,
+        old_price: 9500,
+    
+    },
+    {
+        id:68,
+        name:"Paula’s Choice Skin Perfecting 2% BHA Liquid Exfoliant",
+        category:"Skincare",
+        image:p68_img,
+        new_price: 6500,
+        old_price: 6800,
+    
+    },
+    
+    {
+        id:69,
+        name:"Kiehl's Creamy Eye Treatment with Avocado",
+        category:"Skincare",
+        image:p69_img,
+        new_price: 5522,
+        old_price: 6522,
+    
+    },
+    {
+        id:70,
+        name:"Thayers Alcohol-Free Witch Hazel Toner",
+        category:"Skincare",
+        image:p70_img,
+        new_price: 2500,
+        old_price: 4500,
+    
+    },
+    {
+        id:71,
+        name:"Himalayan Charcoal Purifying Glow Mask",
+        category:"Skincare",
+        image:p71_img,
+        new_price: 5670,
+        old_price: 11340,
+    
+    },
+    {
+        id:72,
+        name:"The Ordinary Organic Rose Hip Seed Oil",
+        category:"Skincare",
+        image:p72_img,
+        new_price: 4499,
+        old_price: 5499,
+    
+    },
+    {
+        id:73,
+        name:"Clinique Take The Day Off Cleansing Balm",
+        category:"Skincare",
+        image:p73_img,
+        new_price: 9800,
+        old_price: 10800,
+    
+    },
+    {
+        id:74,
+        name:"Olay Regenerist Night Recovery Cream",
+        category:"Skincare",
+        image:p74_img,
+        new_price: 8150,
+        old_price: 9800,
+    
+    },
+    {
+        id:75,
+        name:"Mario Badescu Facial Rosewater",
+        category:"Skincare",
+        image:p75_img,
+        new_price: 3160,
+        old_price: 3950,
+    
+    },
+    {
+        id:76,
+        name:"Clean & Clear Advantage Acne Spot Treatment",
+        category:"Skincare",
+        image:p76_img,
+        new_price: 4805,
+        old_price: 5909,
+    
+    },
+    {
+        id:77,
+        name:"Burt’s Bees Beeswax Lip Balm",
+        category:"Skincare",
+        image:p77_img,
+        new_price: 2500,
+        old_price: 3090,
+    
+    },
+    {
+        id:78,
+        name:"Nivea Essentially Enriched Body Lotion",
+        category:"Skincare",
+        image:p78_img,
+        new_price: 2250,
+        old_price: 2750,
+    
+    },
+    
     ];
     export default all_product;
